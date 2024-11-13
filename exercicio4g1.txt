@@ -1,31 +1,49 @@
-Algoritmo nao sei Emanuel
+﻿Algoritmo naosei
 
-ED:  N, i, numero, countPositivos,soma  inteiro
-     percentagemPositivos, media   real
+ED:  
+    N, i, numero, countPositivos, countNegativos, somaNumeros, somaNegativos inteiro
+    percentagemPositivos, mediaNumeros, mediaNegativos real
 
 Início
- 
+   
+        Escrever "Digite o número de valores (N): "
+        Ler N
+
     countPositivos <- 0
-    Repetir
-    Escrever("Digite o número de valores (N): ")
-    Ler N
-	Se N < 0 entao
-		Escreva("Insira um Numero Positivo")
-		
-        Fim se
-	ate N > 0
+    countNegativos <- 0
+    somaNumeros <- 0
+    somaNegativos <- 0
 
     Para i de 1 até N faça
-        Escreva "Digite o número ", i, ": "
-        Leia numero
-        soma<--soma + N
+        Escrever "Digite o número ", i, ": "
+        Ler numero
+        
+        
+        somaNumeros <- somaNumeros + numero
+        
+     
         Se numero > 0 então
             countPositivos <- countPositivos + 1
+        Senão Se numero < 0 então
+            countNegativos <- countNegativos + 1
+            somaNegativos <- somaNegativos + numero
         Fim Se
     Fim Para
+
     percentagemPositivos <- (countPositivos / N) * 100
-    media <-- soma /N
-    Escreva("A percentagem de números positivos é: ", percentagemPositivos, "%")
-    Escreva("A Soma",soma,"Media:",media)
+
+    mediaNumeros <- somaNumeros / N
+
+    Se countNegativos > 0 então
+        mediaNegativos <- somaNegativos / countNegativos
+    Senão
+        mediaNegativos <- 0 
+    Fim Se
+
+    Escrever "A percentagem de números positivos é: ", percentagemPositivos, "%"
+    Escrever "A soma dos números é: ", somaNumeros
+    Escrever "A média dos números é: ", mediaNumeros
+    Escrever "A soma dos números negativos é: ", somaNegativos
+    Escrever "A média dos números negativos é: ", mediaNegativos
 
 Fim
