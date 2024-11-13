@@ -1,0 +1,12 @@
+﻿algoritmo cubo e quadrado Emanuel
+
+ED: numero, quadrado, cubo  inteiro
+
+Inicio
+	Escrever("Digite um numero")
+	ler(Numero)
+	quadrado <-- numero * numero
+	cubo <-- numero * numero * numero
+	Escrever("Quadrado:", quadrado)
+	Escrever("Cubo:", cubo)
+Fim
