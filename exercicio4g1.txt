@@ -1,24 +1,31 @@
 Algoritmo nao sei Emanuel
 
-ED:  N, i, numero, countPositivos inteiro
-     percentagemPositivos   real
+ED:  N, i, numero, countPositivos,soma  inteiro
+     percentagemPositivos, media   real
 
 Início
  
-    Escrever "Digite o número de valores (N): "
-    Ler N
-
     countPositivos <- 0
+    Repetir
+    Escrever("Digite o número de valores (N): ")
+    Ler N
+	Se N < 0 entao
+		Escreva("Insira um Numero Positivo")
+		
+        Fim se
+	ate N > 0
 
     Para i de 1 até N faça
         Escreva "Digite o número ", i, ": "
         Leia numero
+        soma<--soma + N
         Se numero > 0 então
             countPositivos <- countPositivos + 1
         Fim Se
     Fim Para
     percentagemPositivos <- (countPositivos / N) * 100
-
-    Escreva "A percentagem de números positivos é: ", percentagemPositivos, "%"
+    media <-- soma /N
+    Escreva("A percentagem de números positivos é: ", percentagemPositivos, "%")
+    Escreva("A Soma",soma,"Media:",media)
 
 Fim
