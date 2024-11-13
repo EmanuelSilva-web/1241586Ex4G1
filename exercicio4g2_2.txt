@@ -1,6 +1,6 @@
 ﻿algoritmo cubo e quadrado Emanuel
 
-ED: Lado1, Lado2, Lado3, Area, perimetro  inteiro
+ED: Lado1, Lado2, Lado3, Area, ret, perimetro  inteiro
 	
 Inicio
 
@@ -36,6 +36,9 @@ Inicio
 	area <-- "Raiz" perimetro(perimetro-lado1)*(perimetro-lado2)*(perimetro-lado3)
 
 	altura <-- (area * lado1) /2
+
+        ret <-- lado1 * altura /4
+    
 
 	Escrever("Area do Triangulo:",area)
 	
