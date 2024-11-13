@@ -1,6 +1,6 @@
-Algoritmo nprimos
+Algoritmo impares
 
-ED: n,i,numero,c inteiros
+ED: n,i,numero inteiros
 
 Início
      Escrever("Insira n:")
@@ -9,15 +9,8 @@ Início
      Para i<- 0 Até n - 1 Passo 1 Fazer
        Escrever("Introduza um valor:")
        Ler(numero)
+       Se numero MOD 2 = 1 Então
+       Escrever("É número ímpar)
      FimPara
-      Para i<- 0 Até n - 1 Passo 1 Fazer
-         Se n MOD i = 0 Então
-           c <- c+1
-         Fimse
-     FimPara
-        Se c > 2 Então
-        Escrever("Não é um numéro primo.")
-        Senão
-        Escrever("É um numéro primo.") 
-        FimSe
+    
  Fim
