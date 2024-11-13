@@ -1,0 +1,42 @@
+﻿algoritmo cubo e quadrado Emanuel
+
+ED: Lado1, Lado2, Lado3, Area, perimetro  inteiro
+	
+Inicio
+
+	Escrever("Digite o primeiro Lado:")
+	ler(Lado1)
+	Escrever("Digite o primeiro Lado:")
+	ler(Lado2)
+	Escrever("Digite o primeiro Lado:")
+	ler(Lado3)
+
+	Se (Lado1 + Lado2 > Lado3) E (Lado1 + Lado3 > Lado2) E (Lado3 + Lado2 > Lado1) Entao
+	Escrever("É um triangulo!")
+
+	Se (Lado1=Lado2 E Lado2 = Lado3) Entao
+	Escrever("É um triangulo Equilatero")
+	
+	Senão SE (Lado1=Lado2 E lado2 <> Lado3)
+	Escrever("É um triangulo Isosceles")
+
+	Senão SE (Lado1=Lado2) OU (lado1 = Lado3) OU (Lado2 = Lado3) Entao
+	Escrever("É um triangulo Isosceles")
+
+	Senao
+	Escrever("É um triangulo Escaledo")
+	
+	FimSe
+
+	Escrever("Não é um Triangulo!")
+        FimSe
+	
+	perimetro <-- lado1 + lado2 + lado3 /2
+		
+	area <-- "Raiz" perimetro(perimetro-lado1)*(perimetro-lado2)*(perimetro-lado3)
+
+	altura <-- (area * lado1) /2
+
+	Escrever("Area do Triangulo:",area)
+	
+Fim
