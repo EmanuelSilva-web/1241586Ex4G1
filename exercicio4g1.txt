@@ -1,0 +1,24 @@
+Algoritmo nao sei Emanuel
+
+ED:  N, i, numero, countPositivos inteiro
+     percentagemPositivos   real
+
+Início
+ 
+    Escrever "Digite o número de valores (N): "
+    Ler N
+
+    countPositivos <- 0
+
+    Para i de 1 até N faça
+        Escreva "Digite o número ", i, ": "
+        Leia numero
+        Se numero > 0 então
+            countPositivos <- countPositivos + 1
+        Fim Se
+    Fim Para
+    percentagemPositivos <- (countPositivos / N) * 100
+
+    Escreva "A percentagem de números positivos é: ", percentagemPositivos, "%"
+
+Fim
